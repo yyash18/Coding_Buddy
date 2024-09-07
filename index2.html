@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+      <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required /><br />
+        <div class="button-container">
+          <button type="submit" id="yash">Login</button>
+          <button
+            id="retryButton"
+            style="display: none"
+            onclick="navigateToSignUp()"
+          >
+            Not a user? Sign up
+          </button>
+        </div>
+      </form>
+      <div id="message"></div>
+      <button onclick="navigateToSignUpPage()">Not a user? Signup</button>
+    </div>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          let email = document.getElementById("email").value;
+          let password = document.getElementById("password").value;
+          let users = JSON.parse(localStorage.getItem("users")) || [];
+          let user = users.find(
+            (u) => u.email === email && u.password === password
+          );
+          if (user) {
+            document.getElementById("message").textContent =
+              "Login successful!";
+            document.getElementById("retryButton").style.display = "none"; // Hide retry button
+            // Redirect to index page after successful login
+            window.location.href = "index2.html";
+          } else {
+            document.getElementById("message").textContent =
+              "Login failed. Please check your email and password.";
+            document.getElementById("retryButton").style.display = "block"; // Show retry button
+          }
+        });
+
+      function navigateToSignUp() {
+        // Navigate to the signup page
+        window.location.href = "signup.html";
+      }
+
+      function navigateToSignUpPage() {
+        // Navigate to the signup page
+        window.location.href = "signup.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch User Data</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+
+      button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Check the submission detail</h2>
+      <label for="userId">Enter User ID:</label>
+      <input
+        type="text"
+        id="userId"
+        name="userId"
+        placeholder="Enter User ID..."
+      />
+      <button onclick="fetchData()">Fetch Data</button>
+      <table id="submissionTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Submissions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script>
+      function fetchData() {
+        const userId = document.getElementById("userId").value;
+        if (!userId) {
+          alert("Please enter a user ID");
+          return;
+        }
+
+        fetch(`https://leetcode-stats-api.herokuapp.com/${userId}`)
+          .then((response) => response.json())
+          .then((data) => {
+            const submissionCalendar = data.submissionCalendar;
+            const dates = Object.keys(submissionCalendar);
+            const sortedDates = dates.sort((a, b) => b - a); // Sort dates in descending order
+            const tableBody = document.querySelector("#submissionTable tbody");
+
+            // Clear existing table rows
+            tableBody.innerHTML = "";
+
+            // Populate table with sorted dates and submissions
+            sortedDates.forEach((date) => {
+              const row = tableBody.insertRow();
+              const cell1 = row.insertCell(0);
+              const cell2 = row.insertCell(1);
+              cell1.textContent = new Date(
+                Number(date) * 1000
+              ).toLocaleDateString();
+              cell2.textContent = submissionCalendar[date];
+            });
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+    </script>
+  </body>
+</html>

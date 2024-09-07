@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Dark background color */
+    color: #ddd; /* Text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+    background: linear-gradient(45deg, #333, #111); /* Dark gradient background */
+    animation: changeColor 5s infinite;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#retryButton{
+    margin-top: 30px;
+}
+div.container {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px); /* Apply blur effect to background */
+    margin-bottom: 20px; /* Add margin between form and table */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ccc; /* Label text color */
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #333; /* Input background color */
+    color: #ddd; /* Input text color */
+    border: 1px solid #666; /* Input border color */
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    cursor: pointer;
+}
+
+/* Animation */
+@keyframes changeColor {
+    0% {
+        background-color: #333;
+    }
+    50% {
+        background-color: #111;
+    }
+    100% {
+        background-color: #333;
+    }
+}
+
+
+.button-container {
+    margin-top: 10px;
+}
+
+.button-container button {
+    margin-right: 10px;
+}
+#yash{
+    margin-bottom: 10px;
+}

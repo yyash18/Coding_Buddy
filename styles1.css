@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #ddd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #333, #111);
+    animation: changeColor 5s infinite;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #ddd;
+    border: 1px solid #666;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #666;
+}
+
+th {
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: #333;
+    }
+    50% {
+        background-color: #111;
+    }
+    100% {
+        background-color: #333;
+    }
+}

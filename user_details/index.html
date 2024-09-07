@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Display</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>User Progress</h1>
+    <div>
+        <label for="username">Enter your LeetCode username:</label>
+        <input type="text" id="username" name="username">
+        <button onclick="fetchData()">Get Data</button>
+    </div>
+    <div id="tableContainer">
+        <table id="dataTable">
+            <tr>
+                <th>Category</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td id="status"></td>
+            </tr>
+            <tr>
+                <td>Message</td>
+                <td id="message"></td>
+            </tr>
+            <tr>
+                <td>Total Solved</td>
+                <td id="totalSolved"></td>
+            </tr>
+            <tr>
+                <td>Total Questions</td>
+                <td id="totalQuestions"></td>
+            </tr>
+            <tr>
+                <td>Easy Solved</td>
+                <td id="easySolved"></td>
+            </tr>
+            <tr>
+                <td>Total Easy</td>
+                <td id="totalEasy"></td>
+            </tr>
+            <tr>
+                <td>Medium Solved</td>
+                <td id="mediumSolved"></td>
+            </tr>
+            <tr>
+                <td>Total Medium</td>
+                <td id="totalMedium"></td>
+            </tr>
+            <tr>
+                <td>Hard Solved</td>
+                <td id="hardSolved"></td>
+            </tr>
+            <tr>
+                <td>Total Hard</td>
+                <td id="totalHard"></td>
+            </tr>
+            <tr>
+                <td>Acceptance Rate</td>
+                <td id="acceptanceRate"></td>
+            </tr>
+            <tr>
+                <td>Ranking</td>
+                <td id="ranking"></td>
+            </tr>
+            <tr>
+                <td>Contribution Points</td>
+                <td id="contributionPoints"></td>
+            </tr>
+            <tr>
+                <td>Reputation</td>
+                <td id="reputation"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

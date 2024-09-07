@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Dark background color */
+    color: #ddd; /* Text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+    background: linear-gradient(45deg, #333, #111); /* Dark gradient background */
+    animation: changeColor 5s infinite;
+}
+
+#btn11{
+    margin-top: 10px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inputSection {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inputSection label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.inputSection input[type="text"] {
+    padding: 5px 20px; /* Add padding */
+    width: calc(60% - 10px); /* Adjust width to account for padding */
+    margin-right: 10px;
+    background-color: #333; /* Input background color */
+    color: #ddd; /* Input text color */
+    border: 1px solid #666; /* Input border color */
+}
+
+.inputSection button {
+    padding: 5px 10px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    cursor: pointer;
+}
+
+#badgesContainer {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px); /* Apply blur effect to background */
+    margin-bottom: 20px; /* Add margin between form and table */
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.badge img {
+    width: 100px; /* Increase badge size */
+    height: 100px; /* Increase badge size */
+    margin-right: 20px;
+}
+
+.badgeDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.badgeDetails h2 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.badgeDetails p {
+    margin: 0;
+    color: #999;
+}
+
+.spacing {
+    margin-bottom: 20px; /* Add spacing between heading and input section */
+}

@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Dark background color */
+    color: #ddd; /* Text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+    background: linear-gradient(45deg, #333, #111); /* Dark gradient background */
+    animation: changeColor 5s infinite;
+}
+
+h1 {
+    text-align: top;
+    margin-bottom: 20px;
+    margin-right: 450px;
+}
+
+.container {
+    height: 100vh; /* Set height to 100% of viewport height */
+    width: 100vw; /* Set width to 100% of viewport width */
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    overflow-y: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ccc; /* Label text color */
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    color: #ddd; /* Input text color */
+    border: 1px solid #666; /* Input border color */
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #ddd; /* Text color for table */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #666; /* Table border color */
+}
+
+th {
+    background-color: rgba(50, 50, 50, 0.8); /* Dark background with transparency for table header */
+}
+
+/* Animation */
+@keyframes changeColor {
+    0% {
+        background-color: #333;
+    }
+    50% {
+        background-color: #111;
+    }
+    100% {
+        background-color: #333;
+    }
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    height: 80%;
+    width: 80%;
+    max-width: 800px; /* Increase max-width for a longer container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    margin-bottom: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}

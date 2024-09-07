@@ -1,0 +1,114 @@
+<!-- index3.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contest Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        body {
+    
+        background-color: #222; /* Dark background color */
+    
+        margin: 0;
+        padding: 0;
+
+    
+        height: 100vh;
+        overflow: hidden; /* Hide overflow to prevent scrolling */
+        background: linear-gradient(45deg, #333, #111); /* Dark gradient background */
+        animation: changeColor 5s infinite;
+        }
+        #heh
+        {
+            color: #fffbfb;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="heh">Contest Information</h1>
+    <div class="container">
+        <label for="username">Enter Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter Username...">
+        <button onclick="fetchData()">Fetch Data</button>
+        <table id="contestTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Rating</th>
+                    <th>Ranking</th>
+                    <th>Trend Direction</th>
+                    <th>Problems Solved</th>
+                    <th>Total Problems</th>
+                    <th>Finish Time (Seconds)</th>
+                    <th>Start Time</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="index3.js"></script>
+</body>
+</html>

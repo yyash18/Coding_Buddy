@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo List</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Todo List</h1>
+    <form id="todoForm">
+        <label for="questionName">Question Name:</label>
+        <input type="text" id="questionName" name="questionName" required>
+        <label for="questionLink">Question Link:</label>
+        <input type="text" id="questionLink" name="questionLink" required>
+        <label for="questionType">Question Type:</label>
+        <input type="text" id="questionType" name="questionType" required>
+        <button type="submit">Add Todo</button>
+    </form>
+    <table id="todoTable">
+        <thead>
+            <tr>
+                <th>Question Name</th>
+                <th>Question Link</th>
+                <th>Question Type</th>
+                <th>Done</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
